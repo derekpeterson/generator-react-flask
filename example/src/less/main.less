@@ -1,0 +1,72 @@
+@import 'normalize.less/normalize.less';
+
+@vertical-spacing: 18px;
+@horizontal-spacing: 18px;
+@blue: #0bf;
+
+html {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  width: 90%;
+  min-width: 320px;
+  max-width: 600px;
+  margin: @vertical-spacing auto;
+  padding: @vertical-spacing @horizontal-spacing;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 1px #aaa;
+}
+
+.text-label {
+  display: block;
+  border-left: 1px solid transparent;
+  padding: @vertical-spacing / 2;
+  margin-bottom: @vertical-spacing / 2;
+
+  &.error {
+    border-left: 1px solid red;
+    color: red;
+  }
+}
+
+.text-input {
+  min-width: 50%;
+  padding: @vertical-spacing / 2;
+  border: 1px solid #aaa;
+  border-radius: 9px;
+
+  &:focus {
+    box-shadow: 0 0 3px @blue;
+    outline: none;
+  }
+
+  & + .button {
+    margin-left: @horizontal-spacing / 2;
+  }
+}
+
+.button {
+  padding: @vertical-spacing / 2;
+  border: 0;
+  border-radius: 3px;
+  background: #09f;
+  color: white;
+  box-shadow: 0 1px 3px #777;
+  outline: none;
+
+  &:active {
+    box-shadow: inset 0 1px 3px #777;
+  }
+
+  &-link {
+    background: inherit;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: @blue;
+  }
+}
