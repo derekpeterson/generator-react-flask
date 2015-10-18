@@ -1,0 +1,5 @@
+# npm package directories
+node_modules
+
+# npm likes to complain
+npm-debug.log

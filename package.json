@@ -1,0 +1,41 @@
+{
+  "name": "generator-react-flask",
+  "version": "1.0.0",
+  "description": "A generator to scaffold an app with a React front-end and Flask API",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel/register --recursive spec/*"
+  },
+  "files": [
+    "app"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekpeterson/generator-react-flask.git"
+  },
+  "keywords": [
+    "yeoman",
+    "yeoman-generator",
+    "react",
+    "flask",
+    "webpack"
+  ],
+  "author": "Derek Peterson <derekpetey@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/derekpeterson/generator-react-flask/issues"
+  },
+  "homepage": "https://github.com/derekpeterson/generator-react-flask#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "generator-mocha": "^0.2.0",
+    "lodash": "^3.10.1",
+    "yeoman-generator": "^0.20.3",
+    "yosay": "^1.0.5"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "eslint": "^1.7.1",
+    "mocha": "^2.3.3"
+  }
+}
