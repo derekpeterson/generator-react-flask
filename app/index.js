@@ -19,14 +19,6 @@ module.exports = generators.NamedBase.extend({
       desc: 'Skips the install message',
       type: Boolean
     });
-
-    this.composeWith('mocha:app', {
-      options: {
-        'skip-install': this.options['skip-install']
-      }
-    }, {
-      local: require.resolve('generator-mocha/generators/app/index.js')
-    });
   },
   initializing: function () {
     this.pkg = require('../package.json');
@@ -159,6 +151,11 @@ module.exports = generators.NamedBase.extend({
       );
     },
     js: function () {
+      this.fs.copy(
+        this.templatePath('webpack.config.js'),
+        this.destinationPath('webpack.config.js')
+      );
+
       this.fs.copyTpl(
         this.templatePath('main.js'),
         this.destinationPath('src/js/main.js'),

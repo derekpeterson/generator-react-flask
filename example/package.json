@@ -38,7 +38,6 @@
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "chalk": "^1.1.1",
-    "generator-mocha": "^0.2.0",
     "lodash": "^3.10.1",
     "yeoman-generator": "^0.20.3",
     "yosay": "^1.0.5"
