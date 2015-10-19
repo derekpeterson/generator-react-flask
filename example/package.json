@@ -1,10 +1,10 @@
 {
-  "name": "generator-react-flask",
+  "name": "example",
   "version": "1.0.0",
-  "description": "A generator to scaffold an app with a React front-end and Flask API",
-  "main": "app/index.js",
+  "description": "Front-end for example",
+  "main": "src/js/main.js",
   "scripts": {
-    "app": "npm run prod && python react_flask_example.py",
+    "app": "npm run prod && python example.py",
     "compile": "gulp compile",
     "lint": "eslint src/js",
     "prod": "gulp prod",
@@ -14,14 +14,15 @@
   "author": "Derek Peterson <derekpetey@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/derekpeterson/generator-react-flask.git"
+    "url": "https://www.github.com/derekpeterson/example"
   },
+  "license": "ISC",
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",
     "babel-loader": "^5.3.2",
     "chai": "^3.3.0",
-    "eslint": "^1.7.1",
+    "eslint": "^1.6.0",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.3",
     "gulp-minify-css": "^1.2.1",
@@ -36,25 +37,6 @@
     "normalize.less": "^1.0.0",
     "q": "^1.4.1",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "chalk": "^1.1.1",
-    "lodash": "^3.10.1",
-    "yeoman-generator": "^0.20.3",
-    "yosay": "^1.0.5"
-  },
-  "files": [
-    "app"
-  ],
-  "keywords": [
-    "yeoman",
-    "yeoman-generator",
-    "react",
-    "flask",
-    "webpack"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/derekpeterson/generator-react-flask/issues"
-  },
-  "homepage": "https://github.com/derekpeterson/generator-react-flask#readme"
+    "react-dom": "^0.14.0"
+  }
 }

@@ -3,13 +3,13 @@ import { expect } from 'chai';
 import React from 'react';
 import ReactShallowRenderer from 'react-addons-test-utils';
 
-import ReactFlaskExample from '../../src/js/components/react-flask-example.jsx';
+import Example from '../../src/js/components/example.jsx';
 
-describe('ReactFlaskExample component', function () {
+describe('Example component', function () {
   before(() => {
     let shallowRenderer = ReactShallowRenderer.createRenderer();
     shallowRenderer.render(
-      <ReactFlaskExample />
+      <Example />
     );
     this.result = shallowRenderer.getRenderOutput();
   });

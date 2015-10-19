@@ -79,49 +79,19 @@ module.exports = generators.NamedBase.extend({
       );
     },
     packageJSON: function () {
-      var packageJSON = _merge({
-        name: this.kebabName,
-        version: '1.0.0',
-        description: 'Front-end for ' + this.kebabName,
-        main: 'src/js/main.js',
-        scripts: {
-          app: 'npm run prod && python ' + this.snakeName + '.py',
-          compile: 'gulp compile',
-          lint: 'eslint src/js',
-          prod: 'gulp prod',
-          test: 'mocha --compilers js:babel/register --recursive spec/*',
-          watch: 'gulp watch'
-        },
-        author: this.user.name + ' <' + this.user.email + '>',
-        repository: {
-          type: 'git',
-          url: 'https://www.github.com/' + this.user.github + '/' + this.kebabName + '.git'
-        },
-        devDependencies: {
-          babel: '^5.8.23',
-          'babel-core': '^5.8.25',
-          'babel-loader': '^5.3.2',
-          chai: '^3.3.0',
-          eslint: '^1.6.0',
-          gulp: '^3.9.0',
-          'gulp-less': '^3.0.3',
-          'gulp-minify-css': '^1.2.1',
-          'gulp-watch': '^4.3.5',
-          'less-plugin-autoprefix': '^1.5.1',
-          mocha: '^2.3.3',
-          'react-addons-test-utils': '^0.14.0',
-          sinon: '^1.17.1',
-          webpack: '^1.12.2'
-        },
-        dependencies: {
-          'normalize.less': '^1.0.0',
-          q: '^1.4.1',
-          react: '^0.14.0',
-          'react-dom': '^0.14.0'
+      this.fs.copyTpl(
+        this.templatePath('_package.json'),
+        this.destinationPath('package.json'),
+        {
+          kebabName: this.kebabName,
+          snakeName: this.snakeName,
+          user: {
+            name: this.user.name,
+            email: this.user.email,
+            github: this.user.github
+          }
         }
-      }, this.pkg);
-
-      this.fs.writeJSON('package.json', packageJSON);
+      );
     },
     git: function () {
       this.fs.copy(

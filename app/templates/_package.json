@@ -1,7 +1,7 @@
 {
-  "name": "<%= appName %>",
+  "name": "<%= kebabName %>",
   "version": "1.0.0",
-  "description": "Front-end for <%= appName %>",
+  "description": "Front-end for <%= kebabName %>",
   "main": "src/js/main.js",
   "scripts": {
     "app": "npm run prod && python <%= snakeName %>.py",
@@ -14,7 +14,7 @@
   "author": "<%= user.name %> <<%= user.email %>>",
   "repository": {
     "type": "git",
-    "url": "https://www.github.com/<%= user.github %>/<%= appName %>"
+    "url": "https://www.github.com/<%= user.github %>/<%= kebabName %>"
   },
   "license": "ISC",
   "devDependencies": {

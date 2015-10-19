@@ -1,4 +1,4 @@
-# react-flask-example
+# example
 
 Below you have instructions on how the skeleton project has been set up.
 

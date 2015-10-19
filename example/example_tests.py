@@ -3,7 +3,7 @@ import api
 import unittest
 import tempfile
 
-class ReactFlaskExampleTestCase(unittest.TestCase):
+class ExampleTestCase(unittest.TestCase):
 
     def setUp(self):
         api.app.config['TESTING'] = True

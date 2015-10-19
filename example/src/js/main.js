@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 function init () {
   let app = document.querySelectorAll('[data-section="app"]')[0];
   ReactDOM.render(
-    <ReactFlaskExample />,
+    <Example />,
     app
   );
 }
