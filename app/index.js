@@ -196,6 +196,11 @@ module.exports = generators.NamedBase.extend({
         this.templatePath('index.html'),
         this.destinationPath('templates/index.html')
       );
+
+      this.fs.copy(
+        this.templatePath('requirements.txt'),
+        this.destinationPath('requirements.txt')
+      );
     }
   },
   install: function () {
