@@ -186,9 +186,8 @@ module.exports = generators.NamedBase.extend({
     }
   },
   install: function () {
-    this.installDependencies({
-      skipMessage: this.options['skip-install-message'],
-      skipInstall: this.options['skip-install']
+    this.npmInstall(null, {
+      silent: this.options['skip-install-message']
     });
   },
   end: function () {
@@ -196,16 +195,16 @@ module.exports = generators.NamedBase.extend({
       this.log(
         '\nRun ' +
         chalk.yellow.bold('npm install') +
-        ' to install Node dependencies.'
+        ' to install Node dependencies.\n'
       );
     }
 
     this.log(
-      '\nThe following will set up your Python virtual environment ' +
+      'The following will set up your Python virtual environment ' +
       'and install dependencies:\n' +
-      '\n* ' + chalk.yellow.bold('pyvenv env') +
-      '\n* ' + chalk.yellow.bold('source env/bin/activate') +
-      '\n* ' + chalk.yellow.bold('pip install -r requirements.txt')
+      '\n* ' + chalk.green.bold('pyvenv env') +
+      '\n* ' + chalk.green.bold('source env/bin/activate') +
+      '\n* ' + chalk.green.bold('pip install -r requirements.txt')
     );
   }
 });
