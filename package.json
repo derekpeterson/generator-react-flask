@@ -42,6 +42,7 @@
     "chai": "^3.5.0",
     "eslint": "^2.10.2",
     "mocha": "^2.4.5",
+    "yeoman-assert": "^2.2.1",
     "yeoman-test": "^1.4.0"
   }
 }
