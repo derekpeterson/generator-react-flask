@@ -1,26 +1,17 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "env": {
     "browser": true,
     "es6": true,
     "jquery": true,
     "mocha": true,
-    "node": true,
-  },
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "defaultParams": true,
-    "destructuring": true,
-    "forOf": true,
-    "generators": true,
-    "jsx": true,
-    "modules": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "spread": true,
-    "templateStrings": true
+    "node": true
   },
   "rules": {
     "no-alert": 1,
@@ -68,6 +59,7 @@
     "key-spacing": [0, {
       "align": "value"
     }],
+    "keywords-space": [2],
     "no-extra-semi": 0,
     "no-extra-strict": 0,
     "no-multi-spaces": 0,
@@ -81,7 +73,6 @@
       "before": false,
       "after": true
     }],
-    "space-after-keywords": [2, "always"],
     "space-before-function-paren": [2, "always"],
     "space-infix-ops": 1,
     "spaced-comment": [2, "always"],

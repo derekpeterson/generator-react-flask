@@ -5,12 +5,15 @@ var config = {
   context: __dirname
 };
 
-config.entry = path.join(__dirname, 'src', 'js', 'main.js');
+config.entry = [
+  'babel-polyfill',
+  path.join(__dirname, 'src', 'js', 'main.js')
+];
 
 config.module = {
   loaders: [
     {
-      loader:  'babel',
+      loader:  'babel-loader',
       test:    /\.jsx?$/,
       exclude: /node_modules/
     }

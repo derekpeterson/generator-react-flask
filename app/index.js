@@ -1,10 +1,10 @@
-'use strict';
-
-var generators = require('yeoman-generator');
-var yosay = require('yosay');
-var chalk = require('chalk');
-var _s = require('lodash/string');
-var _merge = require('lodash/object/merge');
+const generators = require('yeoman-generator');
+const yosay = require('yosay');
+const chalk = require('chalk');
+const camelCase = require('lodash.camelcase');
+const capitalize = require('lodash.capitalize');
+const kebabCase = require('lodash.kebabcase');
+const snakeCase = require('lodash.snakecase');
 
 module.exports = generators.NamedBase.extend({
   constructor: function () {
@@ -54,9 +54,9 @@ module.exports = generators.NamedBase.extend({
     }];
 
     this.prompt(prompts, function (answers) {
-      this.kebabName = _s.kebabCase(answers.appName);
-      this.snakeName = _s.snakeCase(answers.appName);
-      this.pascalName = _s.capitalize(_s.camelCase(answers.appName));
+      this.kebabName = kebabCase(answers.appName);
+      this.snakeName = snakeCase(answers.appName);
+      this.pascalName = capitalize(camelCase(answers.appName));
       this.user = {
         name: answers.userName,
         email: answers.email,
@@ -108,10 +108,22 @@ module.exports = generators.NamedBase.extend({
         }
       );
     },
+    editorconfig: function () {
+      this.fs.copy(
+        this.templatePath('editorconfig'),
+        this.destinationPath('.editorconfig')
+      );
+    },
+    babelrc: function () {
+      this.fs.copy(
+        this.templatePath('babelrc'),
+        this.destinationPath('.babelrc')
+      );
+    },
     eslintrc: function () {
       this.fs.copy(
         this.templatePath('eslintrc'),
-        this.destinationPath('.eslintrc')
+        this.destinationPath('.eslintrc.json')
       );
     },
     styles: function () {
@@ -140,8 +152,8 @@ module.exports = generators.NamedBase.extend({
       );
 
       this.fs.copyTpl(
-        this.templatePath('component-spec.jsx'),
-        this.destinationPath('spec/components/' + this.kebabName + '-spec.jsx'),
+        this.templatePath('component-test.jsx'),
+        this.destinationPath('test/components/' + this.kebabName + '-test.jsx'),
         {
           componentName: this.pascalName,
           kebabName: this.kebabName
