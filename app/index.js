@@ -39,7 +39,7 @@ module.exports = generators.NamedBase.extend({
     }, {
       type: 'input',
       name: 'userName',
-      message: 'What is your name? (Used for the package.json. Capitalize the first character)',
+      message: 'What is your name? (Used for the package.json.)',
       store: true
     }, {
       type: 'input',
