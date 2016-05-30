@@ -48,6 +48,7 @@ describe('react-flask', function () {
 
     it('gulp', function () {
       yassert.file('gulpfile.js');
+      yassert.fileContent('gulpfile.js', /NODE_ENV: JSON\.stringify\("production"\)/);
     });
 
     it('npm', function () {
