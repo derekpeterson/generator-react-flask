@@ -1,6 +1,6 @@
 {
   "name": "generator-react-flask",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A generator to scaffold an app with a React front-end and Flask API",
   "main": "app/index.js",
   "scripts": {
