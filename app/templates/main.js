@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import <%= componentName %> from './components/<%= componentName %>'
 
 function init () {
   let app = document.querySelectorAll('[data-section="app"]')[0];
