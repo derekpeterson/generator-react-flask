@@ -1,5 +1,11 @@
 # generator-react-flask
 
+**DEPRECATED**
+
+This project is deprecated. You shouldn't use it.
+
+---
+
 [![Build Status](https://travis-ci.org/derekpeterson/generator-react-flask.svg?branch=master)](https://travis-ci.org/derekpeterson/generator-react-flask)
 
 [![NPM](https://nodei.co/npm/generator-react-flask.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/generator-react-flask/)
