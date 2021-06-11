@@ -26,8 +26,6 @@ Run the generator with Yeoman:
 yo react-flask
 ```
 
-![screenshot of prompt](img/generator-prompt.png)
-
 The generator asks you for the project name, your name, your email address,
 and your GitHub user name. It uses these to configure the generated files, not
 for anything creepy.
